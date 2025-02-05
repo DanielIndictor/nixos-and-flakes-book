@@ -52,6 +52,10 @@ of the current flake. There are various types of inputs, as shown in the example
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+
+    # Use the input of another input (sops-nix) in this flake.
+    nixpkgs-from-sops-nix.url = "sops-nix/nixpkgs";
+
     # Lock the flake to a specific commit.
     nix-doom-emacs = {
       url = "github:vlaci/nix-doom-emacs?rev=238b18d7b2c8239f676358634bfb32693d3706f3";
